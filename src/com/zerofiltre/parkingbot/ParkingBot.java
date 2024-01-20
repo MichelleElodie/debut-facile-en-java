@@ -16,6 +16,38 @@ public class ParkingBot {
    */
   public static void main(String[] args) {
 
+   /* for (int i = 0; i < customers.length; i++) {
+
+      sayHello(customers[i]);
+
+    }
+*/
+   /* for (String customer : customers){
+
+      sayHello(customer);
+    }*/
+
+    System.out.println(" Nous avons " +parkingSize+ " place(s) restante(s)");
+    int customerNumber = 0;
+
+    while (parkingSize > 0){
+
+      parkingSize--; // pour reserver la place au client
+
+      if ("Réné".equals(customers[customerNumber])){
+        customerNumber++;
+        parkingSize++; // pour laisser cette place libre pour le client suivant
+        continue;
+      }
+
+      if ("Booba".equals(customers[customerNumber])){
+        break;
+      }
+      sayHello(customers[customerNumber]);
+      customerNumber++;
+    }
+
+
   }
 
 
